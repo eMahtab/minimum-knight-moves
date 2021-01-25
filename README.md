@@ -41,3 +41,6 @@ class Solution {
     }
 }
 ```
+
+# References :
+1. https://leetcode.com/problems/minimum-knight-moves/discuss/392053/Here-is-how-I-get-the-formula-(with-graphs)
