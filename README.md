@@ -88,6 +88,8 @@ class Solution {
     }
 }
 ```
+## Why posX >= -2 and posY >= -2
+Our target will always be in first quadrant due to symmetry. We don't want to explore the cells which are more than 2 cells in the negative side e.g. (0, -3), (-3, 0), (1, -3), (-3, -2) etc.
 
 # References :
 1. https://leetcode.com/problems/minimum-knight-moves/discuss/392053/Here-is-how-I-get-the-formula-(with-graphs)
