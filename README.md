@@ -75,7 +75,7 @@ class Solution {
                 for(int[] move : moves) {
                     int posX = curr[0] + move[0];
                     int posY = curr[1] + move[1];
-                    if(!visited.contains(posX + "," + posY) && posX >= -2 && posY >= -2) {
+                    if(posX >= -2 && posY >= -2 && !visited.contains(posX + "," + posY)) {
                         visited.add(posX + "," + posY);
                         q.add(new int[]{posX, posY});
                     }
