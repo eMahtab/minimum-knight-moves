@@ -52,6 +52,8 @@ class Solution {
 
 ![Knight Moves Symmetry](knight-moves-symmetry.png?raw=true "Knight Moves Symmetry")
 
+If you look carefully in the above diagram, knight moves are symmetric vertically, horizontally and diagonally.
+
 # Solution 2
 
 ```java
