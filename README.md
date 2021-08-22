@@ -97,7 +97,7 @@ class Solution {
 }
 ```
 ## Why we are neglecting posX < -1 and posY < 0
-We only have issue reaching cell (1,1), to reach that cell we need to isit either cell (-1, 2) or cell (2, -1). All other cells can be skipped, where posX is less than -1 or posY is less than -1. By doing this we are reducing our search space drastically and its a great improvement by utilising the fact that Knight Moves are symmetric.
+We only have issue reaching cell (1,1), to reach that cell we need to visit either cell (-1, 2) or cell (2, -1). All other cells can be skipped, where posX is less than -1 or posY is less than -1. By doing this we are reducing our search space drastically and its a great improvement by utilising the fact that Knight Moves are symmetric.
 
 
 # References :
