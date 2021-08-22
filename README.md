@@ -48,6 +48,10 @@ class Solution {
 }
 ```
 
+## Knight Moves Symmetry
+
+![Knight Moves Symmetry](knight-moves-symmetry.png?raw=true "Knight Moves Symmetry")
+
 # Solution 2
 
 ```java
