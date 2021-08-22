@@ -54,7 +54,7 @@ class Solution {
 
 If you look carefully in the above diagram, knight moves are symmetric vertically, horizontally and diagonally.
 
-# Solution 2
+# Solution 2 : Using Symmetry
 
 ```java
 class Solution {
@@ -81,7 +81,9 @@ class Solution {
                 for(int[] move : moves) {
                     int posX = curr[0] + move[0];
                     int posY = curr[1] + move[1];
-                    if(posX >= -2 && posY >= -2 && !visited.contains(posX + "," + posY)) {
+                    if(posX < 0 || posY < -1) // we can also write it like (posX < -1 || posY < 0) continue;
+                        continue;
+                    if(!visited.contains(posX + "," + posY)) {
                         visited.add(posX + "," + posY);
                         q.add(new int[]{posX, posY});
                     }
@@ -94,8 +96,9 @@ class Solution {
     }
 }
 ```
-## Why posX >= -2 and posY >= -2
-Our target will always be in first quadrant due to symmetry. We don't want to explore the cells which are more than 2 cells in the negative side e.g. (0, -3), (-3, 0), (1, -3), (-3, -2) etc.
+## Why we are neglecting posX < -1 and posY < 0
+We only have issue reaching cell (1,1), to reach that cell we need to isit either cell (-1, 2) or cell (2, -1). All other cells can be skipped, where posX is less than -1 or posY is less than -1. By doing this we are reducing our search space drastically and its a great improvement by utilising the fact that Knight Moves are symmetric.
+
 
 # References :
 1. https://leetcode.com/problems/minimum-knight-moves/discuss/392053/Here-is-how-I-get-the-formula-(with-graphs)
